@@ -1,0 +1,412 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    height: 8px;
+    z-index: 1000;
+    top: 0;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative; /* Required for the underline effect */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff5722; /* Underline color */
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Full-width underline on hover */
+}
+
+.login-item {
+    margin-left: auto;
+    margin: 0;
+}
+
+.login-btn {
+    background-color: #ff5722;
+    color: white;
+    width: 80%;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #e64a19; /* Darker shade on hover */
+    transform: scale(1.1); /* Slight enlargement */
+}
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/travel.webp');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adds a dark overlay */
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2; /* Ensures content appears above overlay */
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2; /* Ensures content appears above overlay */
+}
+
+/* Destinations Section */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.destination-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    justify-items: center;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 20px; /* Rounded corners for the card */
+    margin-bottom: 20px;
+}
+
+.card img {
+    border-radius: 20px; /* Rounded corners for the images */
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect: Image zoom and shadow */
+.card img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Box shadow for hover effect */
+}
+
+
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+   /* transition: opacity 0.3s ease; /* Fade effect */
+    border-radius: 20px; /* Match the rounded corners of the card */
+} 
+
+.card:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Explore Button */
+.card .explore-btn {
+    background-color: #1a16159a;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Remove underline for links */
+    font-weight: none;
+}
+
+.card .explore-btn:hover {
+    background-color: #aaa4a2b8; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly enlarge button */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    z-index: 1;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+.image-container .bottom-text {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*attractions section*/
+.section1 {
+    padding: 50px 20px;
+    text-align: center;
+    background-color:rgba(216, 191, 216, 0.244);
+}
+
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.4rem;
+    }
+
+    .destination-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .card img {
+        height: 150px;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .destination-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: calc(33.33% - 20px);
+    }
+
+    .card img {
+        height: 250px;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .destination-cards {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+        gap: 20px; /* Space between cards */
+        justify-items: center;
+    }
+
+    .card {
+        width: 100%; /* Make each card take full width within the grid */
+        max-width: 400px; /* Limit the width to maintain a better look */
+        margin: 0 auto; /* Center cards */
+    }
+
+    .card img {
+        height: 150px; /* Reduce image height to fit better */
+        object-fit: cover; /* Maintain image aspect ratio */
+        width: 100%;
+        border-radius: 10px; /* Slight rounding of image corners */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Adjust for medium screens */
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Adjust text size for readability */
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        padding: 15px 40px; /* Slightly reduced padding for the navbar */
+    }
+
+    .login-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        width: 180px; /* Fixed width for consistency */
+        margin-left: auto; /* Center-align */
+        margin-right: auto; /* Center-align */
+        border-radius: 30px; /* Make the button rounded */
+        text-align: center; /* Align text */
+        display: block; /* Make it a block-level element */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .login-btn:hover {
+        background-color: #e64a19; /* Darker shade on hover */
+        transform: scale(1.05); /* Slightly enlarge button */
+    }
+
+    .login-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        width: auto;
+    }
+}
+

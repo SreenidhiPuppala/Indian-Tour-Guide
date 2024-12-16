@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Monument Map</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="map_page.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">Eternal India</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="home_page.html">Destinations</a></li>
+            <li><a href="things-to-do.html">Things To Do</a></li>
+            <li><a href="wild_life.html">Wild Life</a></li>
+            <li><a href="adventures.html">Adventures</a></li>
+            <li class="login-item">
+                <a href="#login" class="login-btn">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Flashing Images -->
+    <div class="hero-image">
+        <div class="slideshow">
+            <img src="images-mysore/Mysore1.webp" alt="Delhi Image 1" class="slide">
+            <img src="images-mysore/Mysore2.jpeg" alt="Delhi Image 2" class="slide">
+            <img src="images-mysore/Mysore4.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-mysore/Mysore3.jpeg" alt="Delhi Image 3" class="slide">    
+            <img src="images-mysore/Mysore5.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-mysore/Mysore6.webp" alt="Delhi Image 3" class="slide">
+            <img src="images-mysore/Mysore7.webp" alt="Delhi Image 3" class="slide">
+            <img src="images-mysore/Mysore8.jpeg" alt="Delhi Image 3" class="slide">
+        </div>
+        <div class="hero-text">Mysore Palace</div>
+    </div>
+
+
+    <div class="section">
+        <div class="text-container">
+            <h2>Mysore Palace</h2>
+            <p>
+                Mysore Palace, also known as the Amba Vilas Palace, is a historical and architectural masterpiece located in Mysore, Karnataka, India. It served as the royal residence of the Wadiyar dynasty, who ruled the Kingdom of Mysore for over six centuries. The palace is one of the most visited tourist attractions in India, admired for its grandeur, intricate craftsmanship, and cultural significance.
+
+            <!-- Read More Button -->
+        <button id="read-more-btn" class="read-more-btn">Read More</button>
+            
+            <!-- The rest of the content hidden by default -->
+            <div id="more-content" style="display: none;">
+
+                    <p><strong>Key Features:</strong></p>
+                    <p><strong>Architectural Style:</strong>
+                        The palace showcases the <strong>Indo-Saracenic architecture</strong>, blending Hindu, Muslim, Rajput, and Gothic styles. Designed by British architect <strong>Henry Irwin</strong>, it was completed in 1912 after a fire destroyed the original wooden structure.
+                    </p>
+                    <p><strong>Magnificent Interiors:</strong>
+                        The palace interiors feature exquisite stained glass, intricately carved wooden doors, marble flooring, and beautiful frescoes. The <strong>Durbar Hall</strong> and <strong>Ambavilasa Hall</strong> are highlights with their elaborate gold-plated decorations.
+                    </p>
+                    <p><strong>Illumination:</strong>
+                        The palace is lit up with <strong>100,000+ bulbs</strong> every Sunday, on public holidays, and during the <strong>Dussehra Festival</strong>, creating a breathtaking view.
+                    </p>
+                    <p><strong>Dussehra Festival:</strong>
+                        Mysore Palace is the centerpiece of the grand <strong>Mysore Dussehra celebrations</strong>, a 10-day festival featuring royal processions, cultural performances, and traditional rituals.
+                    </p>
+                    <p><strong>Museum:</strong>
+                        The palace also houses a museum displaying royal artifacts, paintings, costumes, jewelry, and weapons of the Wadiyar dynasty.
+                    </p>
+
+                    <p><strong>Why Visit Mysore Palace?</strong></p>
+                    <ul>
+                        <li>Experience the grandeur of royal architecture and history.</li>
+                        <li>Admire one of the finest examples of Indo-Saracenic architecture.</li>
+                        <li>Witness the magical illumination during Dussehra and special occasions.</li>
+                    </ul>
+                <button id="read-less-btn" class="read-less-btn">Read Less</button>
+
+            </div>
+        </div>
+    
+        <!-- Map Section -->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div class="container">
+    <section class="get-there">
+        <h2 class="get-there-h2">HOW TO GET THERE</h2>
+        <div class="transport-container">
+        <div class="transport-info">
+            <div class="tabs">
+            <button class="tab active" onclick="showContent('air')">Air</button>
+            <button class="tab" onclick="showContent('rail')">Rail</button>
+            <button class="tab" onclick="showContent('road')">Road</button>
+            </div>
+            <div class="tab-content" id="air">
+                <ul>
+                    <li><strong>Nearest Airport:</strong> Mysore Airport (also known as Mandakalli Airport), located about 12 km from the palace. However, it has limited flights.</li>
+                    <li>The nearest major airport is <strong>Bangalore Kempegowda International Airport</strong>, about 170 km away. From Bangalore, you can take a train, bus, or taxi to Mysore.</li>
+                </ul>
+                
+            </div>
+            <div class="tab-content hidden" id="rail">
+                <ul>
+                    <li>The <strong>Mysore Junction Railway Station</strong> is located just 2 km from Mysore Palace and is well-connected to major cities like Bangalore, Chennai, and Hyderabad.</li>
+                    <li>From the railway station, you can take an auto-rickshaw, cab, or local bus to the palace.</li>
+                </ul>
+             </div>
+            <div class="tab-content hidden" id="road">
+                <ul>
+                    <li><strong>From Bangalore:</strong> Mysore is approximately 145 km from Bangalore and can be reached via the <strong>Bangalore-Mysore Expressway</strong> in about 3-4 hours by car or bus.</li>
+                    <li>Regular government and private buses operate between Mysore and major cities like Bangalore, Chennai, and Coimbatore. The Mysore Bus Stand is about 1 km from the palace.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="transport-image">
+            <img src="images/airplane.jpeg" id="tab-image" alt="Airplane Wing View">
+        </div>
+        </div>
+    </section>
+</div>
+
+<br>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Incredible India Tours. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.svg.png" alt="Instagram"></a>
+            <a href="#"><img src="images/twitter.svg.png" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
+
+    
+    
+    <!-- Google Maps Script -->
+    
+    <script>
+        function initMap() {
+        // Coordinates for Mysore Palace
+        const mysorePalaceLocation = { lat: 12.3052, lng: 76.6552 };
+
+        // Initialize the map
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 14, // Zoom level
+            center: mysorePalaceLocation, // Center the map on Mysore Palace
+        });
+
+        // Add a marker at the center
+        new google.maps.Marker({
+            position: mysorePalaceLocation,
+            map: map,
+            title: "Mysore Palace, Mysuru, India",
+        });
+    }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUVPZ2kCGidQ9gT-Z5mHsO2jz78vtN6-A&callback=initMap">
+    </script>
+<script src="script3.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Monument Map</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="map_page.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">Eternal India</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="home_page.html">Destinations</a></li>
+            <li><a href="things-to-do.html">Things To Do</a></li>
+            <li><a href="wild_life.html">Wild Life</a></li>
+            <li><a href="adventures.html">Adventures</a></li>
+            <li class="login-item">
+                <a href="#login" class="login-btn">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Flashing Images -->
+    <div class="hero-image">
+        <div class="slideshow">
+            <img src="images-hampi/Hampi1.jpeg" alt="Delhi Image 1" class="slide">
+            <img src="images-hampi/Hampi2.jpeg" alt="Delhi Image 2" class="slide">
+            <img src="images-hampi/Hampi3.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-hampi/Hampi4.jpeg" alt="Delhi Image 3" class="slide">    
+            <img src="images-hampi/Hampi5.webp" alt="Delhi Image 3" class="slide">
+            <img src="images-hampi/Hampi6.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-hampi/Hampi7.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-hampi/Hampi8.jpeg" alt="Delhi Image 3" class="slide">
+        </div>
+        <div class="hero-text">Hampi</div>
+    </div>
+
+
+    <div class="section">
+        <div class="text-container">
+            <h2>Hampi</h2>
+            <p>
+                Hampi is an ancient UNESCO World Heritage site located in Karnataka, India. It was once the capital of the Vijayanagara Empire in the 14th to 16th centuries. Known for its stunning ruins, temples, and boulder-strewn landscapes, Hampi is a haven for history lovers and photographers. Key attractions include the Virupaksha Temple, Vittala Temple, Stone Chariot, and Hampi Bazaar. The site also offers trekking opportunities and is famous for its serene and mystical ambiance.           
+             </p>
+
+            <!-- Read More Button -->
+        <button id="read-more-btn" class="read-more-btn">Read More</button>
+            
+            <!-- The rest of the content hidden by default -->
+            <div id="more-content" style="display: none;">
+            <p><strong>Key Features of Hampi:</strong></p>
+            <p><strong>Ancient Temples and Monuments:</strong>
+                Hampi is home to several magnificent temples, including the **Virupaksha Temple**, **Vittala Temple**, and the iconic **Stone Chariot**. These temples feature intricate carvings and represent the architectural splendor of the Vijayanagara Empire.
+            </p>
+            <p><strong>Ruins and Archaeological Sites:</strong>
+                The region is dotted with historical ruins such as the **Royal Enclosure**, **Hazara Rama Temple**, and **Mahanavami Dibba**, providing insight into the grandeur of the empire.
+            </p>
+            <p><strong>Scenic Landscape:</strong>
+                Hampi’s unique landscape is characterized by large granite boulders, rocky hills, and the **Tungabhadra River**. The region is also popular for rock climbing, nature walks, and photography.
+            </p>
+            <p><strong>Cultural and Religious Significance:</strong>
+                Hampi has deep cultural and religious importance, and festivals like the **Hampi Utsav** (an annual cultural festival) bring the vibrant traditions of the region to life.
+            </p>
+            <p><strong>Popular Activities:</strong><br>
+                <strong>Trekking:</strong> The surrounding hills and terrain offer great trekking routes.<br>
+                <strong>Photography:</strong> Hampi is a photographer’s paradise, with its stunning landscapes and historic architecture.<br>
+                <strong>Boating:</strong> Take a boat ride on the Tungabhadra River for a peaceful experience.
+            </p>
+            <p><strong>Best Time to Visit:</strong>
+                The best time to visit Hampi is between **October and March** when the weather is pleasant for exploration and outdoor activities.
+            </p>
+                
+                <button id="read-less-btn" class="read-less-btn">Read Less</button>
+
+            </div>
+        </div>
+    
+        <!-- Map Section -->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div class="container">
+    <section class="get-there">
+        <h2 class="get-there-h2">HOW TO GET THERE</h2>
+        <div class="transport-container">
+        <div class="transport-info">
+            <div class="tabs">
+            <button class="tab active" onclick="showContent('air')">Air</button>
+            <button class="tab" onclick="showContent('rail')">Rail</button>
+            <button class="tab" onclick="showContent('road')">Road</button>
+            </div>
+            <div class="tab-content" id="air">
+                <p>
+                    Nearest Airport: The nearest airport to Hampi is Hubli Airport (around 160 km away), which is connected to major cities like Bangalore and Mumbai.<br>
+                    Alternatively, you can fly to Bangalore Kempegowda International Airport (around 350 km) and then take a train or bus to Hampi.
+
+                </p>
+
+            </div>
+            <div class="tab-content hidden" id="rail">
+            <p>
+                Hospet Railway Station (around 13 km from Hampi) is the nearest railway station.<br>
+                You can take a train to Hospet from major cities like Bangalore, Mumbai, Hyderabad, and Goa.<br>
+                From Hospet, you can take a taxi or bus to Hampi (approximately 30 minutes drive).
+                            </p>
+            </div>
+            <div class="tab-content hidden" id="road">
+                <p>
+                    Hampi is well connected by road, and you can hire a private cab or rent a car. It’s around 350 km from Bangalore and takes approximately 6-8 hours to reach.
+                </p>
+            </div>
+        </div>
+        <div class="transport-image">
+            <img src="images/airplane.jpeg" id="tab-image" alt="Airplane Wing View">
+        </div>
+        </div>
+    </section>
+</div>
+
+<br>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Incredible India Tours. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.svg.png" alt="Instagram"></a>
+            <a href="#"><img src="images/twitter.svg.png" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
+
+    
+    
+    <!-- Google Maps Script -->
+    
+    <script>
+        function initMap() {
+        // Coordinates for Hampi
+        const hampiLocation = { lat: 15.3350, lng: 76.4610 };
+
+        // Initialize the map
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 14, // Zoom level
+            center: hampiLocation, // Center the map on Hampi
+        });
+
+        // Add a marker at the center
+        new google.maps.Marker({
+            position: hampiLocation,
+            map: map,
+            title: "Hampi, Karnataka, India",
+        });
+    }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUVPZ2kCGidQ9gT-Z5mHsO2jz78vtN6-A&callback=initMap">
+    </script>
+<script src="script3.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Monument Map</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="map_page.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">Eternal India</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="home_page.html">Destinations</a></li>
+            <li><a href="things-to-do.html">Things To Do</a></li>
+            <li><a href="wild_life.html">Wild Life</a></li>
+            <li><a href="adventures.html">Adventures</a></li>
+            <li class="login-item">
+                <a href="#login" class="login-btn">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Flashing Images -->
+    <div class="hero-image">
+        <div class="slideshow">
+            <img src="images-leh ladakh/leh-ladakh1.jpeg" alt="Delhi Image 1" class="slide">
+            <img src="images-leh ladakh/leh-ladakh2.jpeg" alt="Delhi Image 2" class="slide">
+            <img src="images-leh ladakh/leh-ladakh3.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-leh ladakh/leh-ladakh4.jpeg" alt="Delhi Image 3" class="slide">    
+            <img src="images-leh ladakh/leh-ladakh5.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-leh ladakh/leh-ladakh6.avif" alt="Delhi Image 3" class="slide">
+            <img src="images-leh ladakh/leh-ladakh7.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-leh ladakh/leh-ladakh8.jpeg" alt="Delhi Image 3" class="slide">
+        </div>
+        <div class="hero-text">Leh Ladakh</div>
+    </div>
+
+
+    <div class="section">
+        <div class="text-container">
+            <h2>Leh Ladakh</h2>
+            <p>
+                Leh-Ladakh is a unique and stunning region in northern India, known for its rugged terrain, breathtaking landscapes, and distinct Tibetan culture. Located in the state of Jammu & Kashmir (now part of Ladakh Union Territory), it is a popular destination for adventure seekers, nature lovers, and those looking to experience spiritual peace.            
+            </p>
+
+            <!-- Read More Button -->
+        <button id="read-more-btn" class="read-more-btn">Read More</button>
+            
+            <!-- The rest of the content hidden by default -->
+            <div id="more-content" style="display: none;">
+                <p>
+                    Key Features of Leh-Ladakh:
+                    <p><strong>Spectacular Landscapes:</strong>
+                        Leh-Ladakh is famous for its high-altitude deserts, dramatic mountain ranges, and clear blue skies. It is home to some of the world’s highest motorable roads and beautiful lakes such as Pangong Lake and Tso Moriri.</p>
+                    <p><strong> Monasteries and Spirituality:</strong>
+                        The region has a rich Buddhist heritage, with ancient monasteries like Hemis, Thiksey, and Diskit offering serene environments for meditation and reflection.</p>
+                    <p><strong>Adventure Activities:</strong><br>
+                        Trekking: Trails like the Markha Valley Trek and Chadar Trek (on frozen Zanskar River) attract trekkers from around the world<br>
+                        Motorbiking: The Manali-Leh Highway and Srinagar-Leh Highway are famous among motorcyclists.<br>
+                        River Rafting in the Zanskar River and Indus River.<br>
+                        Mountain Biking and Wildlife Safaris are also popular activities.</p>   
+                    <p><strong>Cultural Influence:</strong>
+                        Leh is a melting pot of Ladakhi, Tibetan, and Himalayan cultures. Traditional festivals like Losar (Tibetan New Year) and Hemis Festival celebrate the rich cultural heritage.</p>
+                    <p><strong>High-Altitude Attractions:</strong>
+                        Khardung La Pass: Once considered the highest motorable pass, it offers spectacular views.<br>
+                        Nubra Valley: Known for its sand dunes, camel rides, and the confluence of the Shyok and Siachen rivers.<br>
+                        Magnetic Hill: A gravity-defying phenomenon where vehicles appear to move uphill.<br>
+                        </p>
+                </p>
+                <button id="read-less-btn" class="read-less-btn">Read Less</button>
+
+            </div>
+        </div>
+    
+        <!-- Map Section -->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div class="container">
+    <section class="get-there">
+        <h2 class="get-there-h2">HOW TO GET THERE</h2>
+        <div class="transport-container">
+        <div class="transport-info">
+            <div class="tabs">
+            <button class="tab active" onclick="showContent('air')">Air</button>
+            <button class="tab" onclick="showContent('rail')">Rail</button>
+            <button class="tab" onclick="showContent('road')">Road</button>
+            </div>
+            <div class="tab-content" id="air">
+                <p>
+                    Leh Airport (Kushok Bakula Rimpochee Airport) is well-connected to major cities in India like Delhi, Mumbai, Srinagar, and Jammu.
+                    Direct flights are available from Delhi (around 1.5 hours flight) and Srinagar (1 hour flight).
+                    Once you arrive at Leh Airport, taxis or local transport can take you to various places within the region.
+                </p>
+
+            </div>
+            <div class="tab-content hidden" id="rail">
+            <p>
+                Leh-Ladakh is not directly connected by a railway network. The nearest railway station to Leh is Jammu Tawi (around 700 km away) or Srinagar (about 400 km away). From these stations, you can take a taxi, bus, or private vehicle to Leh.
+            </p>
+            </div>
+            <div class="tab-content hidden" id="road">
+                <p>
+                   <strong>Manali-Leh Highway:</strong>Open from June to October, this is a popular route for road travelers. The journey takes around 2 days (approximately 480 km) with stops at places like Rohtang Pass, Baralacha La, and Sarchu.</p>
+                <p><strong>Srinagar-Leh Highway</strong>Open from May to October, this route (approximately 430 km) offers beautiful landscapes and passes like Zojila Pass and Drass (the second coldest inhabited place on earth).</p>
+            </div>
+        </div>
+        <div class="transport-image">
+            <img src="images/airplane.jpeg" id="tab-image" alt="Airplane Wing View">
+        </div>
+        </div>
+    </section>
+</div>
+
+<br>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Incredible India Tours. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.svg.png" alt="Instagram"></a>
+            <a href="#"><img src="images/twitter.svg.png" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
+
+    
+    
+    <!-- Google Maps Script -->
+    
+    <script>
+        function initMap() {
+    // Coordinates for Leh, Ladakh
+    const lehLocation = { lat: 34.1526, lng: 77.5773 };
+
+    // Initialize the map
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10, // Zoom level (adjust as needed for Leh)
+        center: lehLocation, // Center the map on Leh, Ladakh
+    });
+
+    // Add a marker at the center
+    new google.maps.Marker({
+        position: lehLocation,
+        map: map,
+        title: "Leh, Ladakh, India",
+    });
+}
+
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUVPZ2kCGidQ9gT-Z5mHsO2jz78vtN6-A&callback=initMap">
+    </script>
+<script src="script3.js"></script>
+</body>
+</html>

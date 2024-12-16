@@ -1,0 +1,205 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    height: 8px;
+    z-index: 1000;
+    top: 0;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative; /* Required for the underline effect */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff5722; /* Underline color */
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Full-width underline on hover */
+}
+/* Hero Section with Parallax Effect */
+.hero {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay Effect (Optional) */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adds a dark overlay */
+    z-index: 1;
+}
+
+/* Content Styling */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensures content appears above overlay */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Section Styling */
+.section {
+    padding: 2rem;
+    background-color: #f7f7f7;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Park Row */
+.park-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Park Item */
+.park-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
+}
+
+/* Image Styling */
+.park-item img {
+    width: 40%;
+    border-radius: 8px;
+    height: 280px;
+}
+
+/* Text Content */
+.park-info {
+    flex: 1;
+}
+
+.park-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.park-info p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Cards */
+.park-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-text {
+    padding: 1rem;
+}
+
+.card-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text p {
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #2d2d2d;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer .social-links img {
+    width: 24px;
+    margin: 0 0.5rem;
+}

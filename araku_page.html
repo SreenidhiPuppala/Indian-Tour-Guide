@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Monument Map</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="map_page.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">Eternal India</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="home_page.html">Destinations</a></li>
+            <li><a href="things-to-do.html">Things To Do</a></li>
+            <li><a href="wild_life.html">Wild Life</a></li>
+            <li><a href="adventures.html">Adventures</a></li>
+            <li class="login-item">
+                <a href="#login" class="login-btn">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Flashing Images -->
+    <div class="hero-image">
+        <div class="slideshow">
+            <img src="images-araku/araku1.webp" alt="Delhi Image 1" class="slide">
+            <img src="images-araku/araku2.jpeg" alt="Delhi Image 2" class="slide">
+            <img src="images-araku/araku3.webp" alt="Delhi Image 3" class="slide">
+            <img src="images-araku/araku4.jpeg" alt="Delhi Image 3" class="slide">    
+            <img src="images-araku/araku5.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-araku/araku6.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-araku/araku7.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-araku/araku8.jpeg" alt="Delhi Image 3" class="slide">
+        </div>
+        <div class="hero-text">Araku</div>
+    </div>
+
+
+    <div class="section">
+        <div class="text-container">
+            <h2>Araku</h2>
+            <p>
+                Araku Valley, often referred to as the "Ooty of Andhra Pradesh," is a stunning hill station located in the Eastern Ghats. It's situated at an altitude of about 900 meters above sea level and is known for its lush green landscapes, cool climate, and scenic views. The valley is a part of the Visakhapatnam district and is surrounded by dense forests, waterfalls, and coffee plantations.<br>
+            </p>
+
+            <!-- Read More Button -->
+        <button id="read-more-btn" class="read-more-btn">Read More</button>
+            
+            <!-- The rest of the content hidden by default -->
+            <div id="more-content" style="display: none;">
+                <p><strong>Coffee Plantations:</strong> Araku Valley is renowned for its organic coffee. The region has several coffee estates where beans are grown using sustainable and eco-friendly methods. Araku coffee has gained international recognition for its unique taste and quality.</p>
+                <p><strong>Tribal Culture:</strong> Araku is home to several indigenous tribes, including the Gonds, Koyas, and others. These tribes maintain a strong cultural heritage, with distinctive languages, clothing, festivals, and traditions. Visitors can explore their lifestyle through tribal tours and cultural interactions.</p>
+                <p><strong>Natural Beauty:</strong> The region is known for its picturesque landscapes, featuring rolling hills, waterfalls like the famous Chaparai Waterfall, and stunning valleys. The Borra Caves, a set of limestone caves with stalactites and stalagmites, are also nearby and are a popular tourist attraction.</p>
+                <p><strong>Ecotourism:</strong> Araku promotes ecotourism with activities such as trekking, nature walks, and birdwatching. The valley's biodiversity and its status as a haven for wildlife add to its charm for nature lovers.</p>
+                <p><strong>Tourist Attractions:</strong> Besides the Borra Caves and Chaparai Waterfall, other places to visit include the Araku Tribal Museum, Tatipudi Reservoir, and Ananthagiri Hills.</p>
+                <p><strong>Access and Transport:</strong> Araku is well-connected by road from Visakhapatnam, and there is a famous Araku Valley Train, which offers a scenic journey through the hills. The valley is around 4-5 hours from Visakhapatnam by car.</p>
+                <p><strong>Climate:</strong> Araku has a pleasant climate throughout the year, making it an ideal retreat from the hot plains. Winters (October to March) are particularly popular among tourists, with cool temperatures and misty mornings.</p>
+                <p>Araku Valley is an excellent blend of nature, culture, and adventure, offering a peaceful getaway for tourists and an opportunity to experience the rural and tribal lifestyle of India.</p>
+               
+                <button id="read-less-btn" class="read-less-btn">Read Less</button>
+
+            </div>
+        </div>
+    
+        <!-- Map Section -->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div class="container">
+    <section class="get-there">
+        <h2 class="get-there-h2">HOW TO GET THERE</h2>
+        <div class="transport-container">
+        <div class="transport-info">
+            <div class="tabs">
+            <button class="tab active" onclick="showContent('air')">Air</button>
+            <button class="tab" onclick="showContent('rail')">Rail</button>
+            <button class="tab" onclick="showContent('road')">Road</button>
+            </div>
+            <div class="tab-content" id="air">
+                <p>
+                    Araku Valley does not have its own airport. The nearest airport is **Visakhapatnam Airport**, approximately 120 kilometers away. From there, you can hire a taxi or use other road transportation to reach Araku.
+                </p>
+
+            </div>
+            <div class="tab-content hidden" id="rail">
+            <p>
+                Araku Valley has its own railway station, **Araku Railway Station**, which is well connected to major cities like Visakhapatnam and other parts of Andhra Pradesh. Trains like **Visakhapatnam–Araku Passenger** run on this route.
+            </p>
+            </div>
+            <div class="tab-content hidden" id="road">
+                <p>
+                    Araku Valley is well connected by road. It is about a 4-5 hour drive from Visakhapatnam. You can take a private taxi, bus, or hire a car to travel through scenic routes such as the **Araku Valley Road**.
+                </p>
+
+            </div>
+        </div>
+        <div class="transport-image">
+            <img src="images/airplane.jpeg" id="tab-image" alt="Airplane Wing View">
+        </div>
+        </div>
+    </section>
+</div>
+
+<br>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Incredible India Tours. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.svg.png" alt="Instagram"></a>
+            <a href="#"><img src="images/twitter.svg.png" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
+
+    
+    
+    <!-- Google Maps Script -->
+    
+    <script>
+        function initMap() {
+            // Coordinates for Araku Valley
+            const arakuLocation = { lat: 18.3272, lng: 82.8774 };
+
+            // Initialize the map
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14, // Zoom level
+                center: arakuLocation, // Center the map on Araku Valley
+            });
+
+            // Add a marker at the center
+            new google.maps.Marker({
+                position: arakuLocation,
+                map: map,
+                title: "Araku Valley, India",
+            });
+        }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUVPZ2kCGidQ9gT-Z5mHsO2jz78vtN6-A&callback=initMap">
+    </script>
+<script src="script3.js"></script>
+</body>
+</html>

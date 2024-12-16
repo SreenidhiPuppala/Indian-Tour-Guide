@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Monument Map</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="map_page.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">Eternal India</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="home_page.html">Destinations</a></li>
+            <li><a href="things-to-do.html">Things To Do</a></li>
+            <li><a href="wild_life.html">Wild Life</a></li>
+            <li><a href="adventures.html">Adventures</a></li>
+            <li class="login-item">
+                <a href="#login" class="login-btn">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Flashing Images -->
+    <div class="hero-image">
+        <div class="slideshow">
+            <img src="images-akshardham/akshardham1.jpeg" alt="Delhi Image 1" class="slide">
+            <img src="images-akshardham/akshardham2.jpeg" alt="Delhi Image 2" class="slide">
+            <img src="images-akshardham/akshardham3.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-akshardham/akshardham4.jpeg" alt="Delhi Image 3" class="slide">    
+            <img src="images-akshardham/akshardham5.webp" alt="Delhi Image 3" class="slide">
+            <img src="images-akshardham/akshardham6.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-akshardham/akshardham7.webp" alt="Delhi Image 3" class="slide">
+            <img src="images-akshardham/akshardham8.jpeg" alt="Delhi Image 3" class="slide">
+        </div>
+        <div class="hero-text">Akshardham Temple</div>
+    </div>
+
+
+    <div class="section">
+        <div class="text-container">
+            <h2>Akshardham Temple</h2>
+            <p>
+                Akshardham Temple, located in Delhi, is a magnificent Hindu temple and spiritual-cultural complex dedicated to Swaminarayan. Inaugurated in 2005, it showcases traditional Indian architecture and is renowned for its intricate carvings, massive central monument, and peaceful surroundings.
+            </p>
+
+            <!-- Read More Button -->
+        <button id="read-more-btn" class="read-more-btn">Read More</button>
+            
+            <!-- The rest of the content hidden by default -->
+            <div id="more-content" style="display: none;">
+                <p>
+                    <strong>Key highlights include:</strong><br>
+                    ▪️ The main temple, made of pink sandstone and white marble, featuring detailed sculptures of deities, flora, and fauna.<br>
+                    ▪️ The Sahaj Anand water show, an immersive light and sound performance.<br>
+                    ▪️ Exhibitions on Indian culture, history, and spirituality through films and robotics.<br>
+                    ▪️ The Yagnapurush Kund, the world’s largest stepwell.<br><br>
+                    A visit offers a blend of spiritual enlightenment, art, and architecture.<br>
+                </p>
+                <button id="read-less-btn" class="read-less-btn">Read Less</button>
+
+            </div>
+        </div>
+    
+        <!-- Map Section -->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div class="container">
+    <section class="get-there">
+        <h2 class="get-there-h2">HOW TO GET THERE</h2>
+        <div class="transport-container">
+        <div class="transport-info">
+            <div class="tabs">
+            <button class="tab active" onclick="showContent('air')">Air</button>
+            <button class="tab" onclick="showContent('rail')">Rail</button>
+            <button class="tab" onclick="showContent('road')">Road</button>
+            </div>
+            <div class="tab-content" id="air">
+                <p>
+                    If you are traveling to Akshardham Temple by plane, you would land at Indira Gandhi International Airport (DEL), which is the main international airport in Delhi. 
+                </p>
+
+            </div>
+            <div class="tab-content hidden" id="rail">
+            <p>
+                The nearest railway station is Hazrat Nizamuddin, about 7 km away. From there, take a taxi, auto-rickshaw, or metro to reach the temple.
+            </p>
+            </div>
+            <div class="tab-content hidden" id="road">
+                <p>
+                    Akshardham is located on NH 24 (Noida Mor), and ample parking is available at the temple.<br>Ride-hailing apps like Ola or Uber are convenient for reaching the temple from anywhere in Delhi.
+                </p>
+
+            </div>
+        </div>
+        <div class="transport-image">
+            <img src="images/airplane.jpeg" id="tab-image" alt="Airplane Wing View">
+        </div>
+        </div>
+    </section>
+</div>
+
+<br>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Incredible India Tours. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.svg.png" alt="Instagram"></a>
+            <a href="#"><img src="images/twitter.svg.png" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
+
+    
+    
+    <!-- Google Maps Script -->
+    
+    <script>
+        function initMap() {
+    // Coordinates for Akshardham Temple
+    const akshardhamLocation = { lat: 28.6129, lng: 77.2773 };
+
+    // Initialize the map
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14, // Zoom level
+        center: akshardhamLocation, // Center the map on Akshardham Temple
+    });
+
+    // Add a marker at the center
+    new google.maps.Marker({
+        position: akshardhamLocation,
+        map: map,
+        title: "Akshardham Temple, Delhi, India",
+    });
+}
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUVPZ2kCGidQ9gT-Z5mHsO2jz78vtN6-A&callback=initMap">
+    </script>
+<script src="script3.js"></script>
+</body>
+</html>

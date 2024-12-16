@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Monument Map</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="map_page.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo">Eternal India</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="home_page.html">Destinations</a></li>
+            <li><a href="things-to-do.html">Things To Do</a></li>
+            <li><a href="wild_life.html">Wild Life</a></li>
+            <li><a href="adventures.html">Adventures</a></li>
+            <li class="login-item">
+                <a href="#login" class="login-btn">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Flashing Images -->
+    <div class="hero-image">
+        <div class="slideshow">
+            <img src="images-varanasi/varanasi1.jpeg" alt="Delhi Image 1" class="slide">
+            <img src="images-varanasi/varanasi2.jpeg" alt="Delhi Image 2" class="slide">
+            <img src="images-varanasi/varanasi3.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-varanasi/varanasi4.jpeg" alt="Delhi Image 3" class="slide">    
+            <img src="images-varanasi/varanasi5.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-varanasi/varanasi6.png" alt="Delhi Image 3" class="slide">
+            <img src="images-varanasi/varanasi7.jpeg" alt="Delhi Image 3" class="slide">
+            <img src="images-varanasi/varanasi8.jpeg" alt="Delhi Image 3" class="slide">
+        </div>
+        <div class="hero-text">Varanasi</div>
+    </div>
+
+
+    <div class="section">
+        <div class="text-container">
+            <h2>Varanasi</h2>
+            <p>
+                Varanasi, also known as Banaras or Kashi, is one of the oldest continuously inhabited cities in the world and is considered the spiritual capital of India. Located in the northern Indian state of Uttar Pradesh along the banks of the sacred Ganges River, it holds immense historical, cultural, and religious significance.            </p>
+
+            <!-- Read More Button -->
+        <button id="read-more-btn" class="read-more-btn">Read More</button>
+            
+            <!-- The rest of the content hidden by default -->
+            <div id="more-content" style="display: none;">
+                <p><strong>Historical Significance:</strong> Varanasi, also known as Kashi or Banaras, is one of the oldest continuously inhabited cities in the world. Believed to be founded by Lord Shiva, it is a spiritual hub for Hindus and has been a center of learning, culture, and civilization for over 3,000 years.</p>
+
+                    <p><strong>Spiritual Importance:</strong> Varanasi is considered the holiest city in India. Pilgrims from across the globe come to take a dip in the Ganges River, believed to cleanse one’s sins. The Kashi Vishwanath Temple, dedicated to Lord Shiva, is one of the twelve Jyotirlingas and holds immense religious significance.</p>
+
+                    <p><strong>Cultural and Architectural Highlights:</strong> Varanasi is famous for its ancient temples, including the Kashi Vishwanath Temple, Sankat Mochan Hanuman Temple, and Durga Temple. The city’s ghats, such as <em>Dashashwamedh Ghat</em> and <em>Manikarnika Ghat</em>, are central to its spiritual life. The evening <em>Ganga Aarti</em> at the ghats is a mesmerizing ritual that attracts visitors.</p>
+
+                    <p><strong>Tribal and Local Heritage:</strong> Varanasi is home to a vibrant cultural scene, with its classical music, dance, and art forms. It is also known for its exquisite Banarasi silk sarees, a testament to the city’s rich weaving tradition.</p>
+
+                    <p><strong>Natural Beauty:</strong> Situated on the banks of the Ganges River, Varanasi offers stunning sunrise views over the ghats. Nearby, Sarnath, where Lord Buddha gave his first sermon, is a peaceful escape with significant historical and natural charm.</p>
+
+                    <p><strong>Tourist Attractions:</strong> Major attractions include the Kashi Vishwanath Temple, Sarnath, Banaras Hindu University, and Ramnagar Fort. The narrow alleys of the old city are also a treasure trove of local cuisine, handicrafts, and spiritual experiences.</p>
+
+                    <p><strong>Access and Transport:</strong> Varanasi is well-connected by air, rail, and road. The Lal Bahadur Shastri International Airport serves both domestic and international flights. Regular trains and buses connect Varanasi to major cities across India.</p>
+
+                    <p><strong>Climate:</strong> Varanasi experiences a tropical climate. Winters (October to March) are the best time to visit, with cool and pleasant weather. Summers can be extremely hot, while the monsoon season brings heavy rains.</p>
+
+                    <p><strong>Varanasi Experience:</strong> Known as the city of life and death, Varanasi offers a deeply spiritual and cultural experience. From exploring ancient temples and witnessing the vibrant Ganga Aarti to navigating its bustling streets, the city promises an unforgettable journey through history and tradition.</p>
+
+                <button id="read-less-btn" class="read-less-btn">Read Less</button>
+
+            </div>
+        </div>
+    
+        <!-- Map Section -->
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <div class="container">
+    <section class="get-there">
+        <h2 class="get-there-h2">HOW TO GET THERE</h2>
+        <div class="transport-container">
+        <div class="transport-info">
+            <div class="tabs">
+            <button class="tab active" onclick="showContent('air')">Air</button>
+            <button class="tab" onclick="showContent('rail')">Rail</button>
+            <button class="tab" onclick="showContent('road')">Road</button>
+            </div>
+            <div class="tab-content" id="air">
+                <p>
+                    Nearest Airport: Lal Bahadur Shastri International Airport (VNS), located about 26 kilometers from the city center.<br>
+                    Domestic Flights: Well-connected to major cities like Delhi, Mumbai, Kolkata, Hyderabad, and Bengaluru.                </p>
+
+            </div>
+            <div class="tab-content hidden" id="rail">
+            <p>
+                Varanasi Junction (BSB) – The main station, centrally located.<br>
+                Manduadih Railway Station (MUV) – An alternative, well-maintained station about 4 km from the city center.<br>
+                Mughalsarai Junction (DDU) – Located 10 km away; one of India's busiest railway stations.            </p>
+            </div>
+            <div class="tab-content hidden" id="road">
+                <p>
+                    State Buses: Uttar Pradesh State Transport operates buses to Varanasi from nearby cities like Lucknow, Allahabad (Prayagraj), and Gorakhpur.<br>
+                    Private Buses: Available from cities like Delhi, Patna, and Agra.
+                                    </p>
+
+            </div>
+        </div>
+        <div class="transport-image">
+            <img src="images/airplane.jpeg" id="tab-image" alt="Airplane Wing View">
+        </div>
+        </div>
+    </section>
+</div>
+
+<br>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Incredible India Tours. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.svg.png" alt="Instagram"></a>
+            <a href="#"><img src="images/twitter.svg.png" alt="Twitter"></a>
+        </div>
+    </div>
+</footer>
+
+    
+    
+    <!-- Google Maps Script -->
+    
+    <script>
+        function initMap() {
+            // Coordinates for Varanasi
+            const varanasiLocation = { lat: 25.3176, lng: 82.9739 };
+
+            // Initialize the map
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14, // Zoom level
+                center: varanasiLocation, // Center the map on Varanasi
+            });
+
+            // Add a marker at the center
+            new google.maps.Marker({
+                position: varanasiLocation,
+                map: map,
+                title: "Varanasi, India",
+            });
+        }
+    </script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUVPZ2kCGidQ9gT-Z5mHsO2jz78vtN6-A&callback=initMap">
+    </script>
+<script src="script3.js"></script>
+</body>
+</html>
